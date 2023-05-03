@@ -1,11 +1,16 @@
 import java.util.Arrays;
 public class Main {
-    public static void main(String[] args) {
+    public static int [] generateRandomArray() {
+        java.util.Random random = new java.util.Random();
+        int[] arr = new int[30];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = random.nextInt(100_000) + 100_000;
+        }
+        return arr;
+    }
 
-        int[] arr = new int [3];
-        arr[0] = 123321;
-        arr[1] = 132255;
-        arr[2] = 225132;
+    public static void main(String[] apgs)  {
+        int[] arr = generateRandomArray();
 
         System.out.println("Зарплаты:");
         System.out.println(Arrays.toString(arr));
